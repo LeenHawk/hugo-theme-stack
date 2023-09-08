@@ -17,7 +17,6 @@
         {{- $Theme := printf `<b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a></b>` $ThemeVersion -}}
         {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
 
-        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
         <p>
             <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
                 <svg width=55 height=16 id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +39,7 @@
             </svg><a href="{{.Site.Params.beian.gongan.url}}">{{.Site.Params.beian.gongan.text}}
             </a>
         </p>
+        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <!--<br /> -->
         <!-- {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }} -->
     </section>
 </footer>
